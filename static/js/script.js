@@ -32,6 +32,7 @@ function getWeatherData(city, unit, hourlyOrWeek) {
             measureUvIndex(today.uvindex);
             MAIN_ICON.src = getIcon(today.icon);
             changeBackground(today.icon);
+            changeLocationBackground(city)
             HUMIDITY.innerText = today.humidity + "%";
             updateHumidityStatus(today.humidity);
             VISIBILITY.innerText = today.visibility;
@@ -131,7 +132,28 @@ function changeBackground(condition) {
         default:
             bg = "static/img/pc.webp";
     }
-    body.style.backgroundImage = `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(${bg})`;
+    body.style.backgroundImage = `linear-gradient(rgb(97 97 97 / 50%), rgb(98 97 97 / 50%)),url(${bg})`;
+}
+
+function changeLocationBackground(city) {
+    console.log("qeq," ,city)
+    const body = document.querySelector(".img-location");
+    let bg = "";
+
+    fetch(
+        `https://api.pexels.com/v1/search?query=${city}&per_page=1`,
+        { method: "GET", headers: {
+            Authorization: API_PEXELS
+        } }
+    )
+        .then((response) => response.json())
+        .then((data) => {
+            bg = data.photos[0].src.medium;
+            body.style.backgroundImage = `linear-gradient(rgb(60 60 60 / 50%), rgb(60 60 60 / 50%)),url(${bg})`;
+        })
+        .catch((err) => {
+            alert("City not found in our database");
+        });
 }
 
 // xử lý giờ, hours from hh:mm:ss

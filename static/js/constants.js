@@ -1,5 +1,6 @@
 const API_KEY = "2YZAYEDGYT7CK63HHQNL7RE52";
 const API_URL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline"
+const API_PEXELS = "b4y7EqrsTBlLB20UM0x1hcHrVDDJ6YsTc5iaNqXtDkYQEWLEWbJdnLdC"
 
 
 const TEMP = document.getElementById("temp"),
