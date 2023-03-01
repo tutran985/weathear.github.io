@@ -294,7 +294,10 @@ img {
 }
 
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 600px) {
+    .main {
+        padding: 20px 20px;
+    }
     body {
         display: flex;
         justify-content: center;
@@ -328,7 +331,7 @@ img {
         object-fit: cover;
     }
     .temperature #temp {
-        font-size: 52px;
+        font-size: 40px;
         font-weight: 100;
         line-height: 1;
     }
@@ -354,7 +357,7 @@ img {
         margin-top: 20px;
     }
     .card2 {
-        width: 218px;
+        width: 63%;
         height: 150px;
         border-radius: 20px;
         color: #1a1a1a;
@@ -366,7 +369,7 @@ img {
     .c-f {
         position: absolute;
         gap: 9px;
-        left: 50%;
+        left: 43%;
         top: 0.6%;
     }
     .today-week {
@@ -388,5 +391,16 @@ img {
     }
     .main nav .options {
         gap: 10px;
+    }
+    .credits {
+        margin-left: 32%;
+        margin-top: 18px;
+        position: initial;
+    }
+    .condition-rain div {
+        display: flex;
+        align-items: center;
+        gap: 0px;
+        margin-bottom: 10px;
     }
   }
