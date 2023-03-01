@@ -1,5 +1,45 @@
+const API_KEY = "2YZAYEDGYT7CK63HHQNL7RE52";
+const API_URL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline"
+
+
+const TEMP = document.getElementById("temp"),
+    DATE = document.getElementById("date-time"),
+    CONDITION = document.getElementById("condition"),
+    RAIN = document.getElementById("rain"),
+    MAIN_ICON = document.getElementById("icon"),
+    CURRENT_LOCATION = document.getElementById("location"),
+    UV_INDEX = document.querySelector(".uv-index"),
+    UV_TEXT = document.querySelector(".uv-text"),
+    WIND_SPEED = document.querySelector(".wind-speed"),
+    SUN_RISE = document.querySelector(".sun-rise"),
+    SUN_SET = document.querySelector(".sun-set"),
+    HUMIDITY = document.querySelector(".humidity"),
+    VISIBILITY = document.querySelector(".visibilty"),
+    HUMIDITY_STATUS = document.querySelector(".humidity-status"),
+    AIR_QUALITY = document.querySelector(".air-quality"),
+    AIR_QUALITY_STATUS = document.querySelector(".air-quality-status"),
+    VISIBILITY_STATUS = document.querySelector(".visibilty-status"),
+    SEARCH_FORM = document.querySelector("#search"),
+    SEARCH = document.querySelector("#query"),
+    C_BTN = document.querySelector(".celcius"),
+    F_BTN = document.querySelector(".fahrenheit"),
+    TEMP_UNIT = document.querySelectorAll(".temp-unit"),
+    HOURLY_BTN = document.querySelector(".hourly"),
+    WEEK_BTN = document.querySelector(".week"),
+    WEATHER_CARDS = document.querySelector("#weather-cards");
+
+const DAYS = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+];
+
 // Cities add your own to get in search
-const cities = [
+const CITIES = [
     {
         country: "PK",
         name: "Abbottabad",
@@ -2653,3 +2693,5 @@ const cities = [
         lng: "0",
     },
 ];
+
+
